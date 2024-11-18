@@ -1,10 +1,10 @@
-const redis = require('redis')
+import { createClient } from 'redis';
 
 let redisClient;
 
 (async () => {
     if(!redisClient) {
-        redisClient = redis.createClient({
+        redisClient = createClient({
             url: ''
         });
     }
